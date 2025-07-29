@@ -2,8 +2,7 @@
 
 import React from "react";
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
-import '@leenguyen/react-flip-clock-countdown/dist/index.css';
-
+import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 
 // Target date (can update this anytime)
 const targetDate = new Date("2025-09-26T22:44:59").getTime();
