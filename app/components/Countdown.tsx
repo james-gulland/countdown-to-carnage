@@ -30,7 +30,14 @@ export const Countdown = () => {
   }, []);
 
   return (
-    <section className={`flex justify-center items-center ${orbitron.className}`}>
+    <section
+      className={`flex justify-center items-center ${orbitron.className}`}
+      style={
+        {
+          "--fcc-spacing": isMobile ? "0.3rem" : "0.5rem",
+        } as React.CSSProperties & Record<string, string>
+      }
+    >
       <FlipClockCountdown
         to={targetDate}
         labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
@@ -39,7 +46,7 @@ export const Countdown = () => {
           fontSize: isMobile ? 10 : 14,
           letterSpacing: 3,
           color: "#000",
-          marginTop: 8
+          marginTop: 8,
         }}
         digitBlockStyle={{
           width: isMobile ? 38 : 60,
