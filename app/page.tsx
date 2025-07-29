@@ -12,7 +12,7 @@ export default function Home() {
         className="object-cover z-[-1]"
       />
 
-      <h1 className="text-black text-4xl mb-4">Countdown to Carnage</h1>
+      <h1 className="text-black text-4xl text-center md:text-[3.6rem] mb-4">Countdown to Carnage</h1>
       <Countdown />
     </main>
   );

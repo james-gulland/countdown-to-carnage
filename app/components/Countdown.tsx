@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 
@@ -17,6 +17,18 @@ const orbitron = Orbitron({
 const targetDate = new Date("2025-09-26T22:44:59").getTime();
 
 export const Countdown = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 640); // Tailwind's sm breakpoint
+    };
+
+    handleResize(); // check on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className={`flex justify-center items-center bg-black ${orbitron.className}`}>
       <FlipClockCountdown
@@ -24,15 +36,15 @@ export const Countdown = () => {
         labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
         labelStyle={{
           fontFamily: tanker.style.fontFamily,
-          fontSize: 14,
+          fontSize: isMobile ? 10 : 14,
           letterSpacing: 2,
           color: "#888",
           marginTop: 8,
         }}
         digitBlockStyle={{
-          width: 60,
-          height: 80,
-          fontSize: 40,
+          width: isMobile ? 38 : 60,
+          height: isMobile ? 50 : 80,
+          fontSize: isMobile ? 24 : 40,
           background: "#111",
           color: "#fff",
         }}
