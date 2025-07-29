@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { tanker } from "./fonts/tanker";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Countdown to Carnage",
   description: "The ultimate countdown to the next hench night out with the lads. Get hyped.",
   keywords: [
