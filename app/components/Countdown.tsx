@@ -36,6 +36,12 @@ export const Countdown = () => {
           background: "#111",
           color: "#fff",
         }}
+        dividerStyle={{
+          color: "#444"
+        }}
+        separatorStyle={{
+          color: "#fff",
+        }}
         duration={0.6}
       />
     </div>
