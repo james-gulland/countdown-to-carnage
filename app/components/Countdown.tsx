@@ -30,16 +30,16 @@ export const Countdown = () => {
   }, []);
 
   return (
-    <section className={`flex justify-center items-center bg-black ${orbitron.className}`}>
+    <section className={`flex justify-center items-center ${orbitron.className}`}>
       <FlipClockCountdown
         to={targetDate}
         labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
         labelStyle={{
           fontFamily: tanker.style.fontFamily,
           fontSize: isMobile ? 10 : 14,
-          letterSpacing: 2,
-          color: "#888",
-          marginTop: 8,
+          letterSpacing: 3,
+          color: "#000",
+          marginTop: 8
         }}
         digitBlockStyle={{
           width: isMobile ? 38 : 60,
@@ -52,7 +52,7 @@ export const Countdown = () => {
           color: "#444",
         }}
         separatorStyle={{
-          color: "#fff",
+          color: "#000",
           size: isMobile ? 3 : 5,
         }}
         duration={0.6}
