@@ -3,7 +3,7 @@ import { Countdown } from "./components/Countdown";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+    <main className="relative min-h-dvh md:min-h-screen w-full flex flex-col items-center justify-center overflow-hidden">
       <Image
         src="/images/fold.jpeg"
         alt="Background"

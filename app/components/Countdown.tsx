@@ -30,7 +30,7 @@ export const Countdown = () => {
   }, []);
 
   return (
-    <div className={`flex justify-center items-center bg-black ${orbitron.className}`}>
+    <section className={`flex justify-center items-center bg-black ${orbitron.className}`}>
       <FlipClockCountdown
         to={targetDate}
         labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
@@ -56,6 +56,6 @@ export const Countdown = () => {
         }}
         duration={0.6}
       />
-    </div>
+    </section>
   );
 };
