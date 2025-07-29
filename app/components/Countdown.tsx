@@ -53,6 +53,7 @@ export const Countdown = () => {
         }}
         separatorStyle={{
           color: "#fff",
+          size: isMobile ? 3 : 5,
         }}
         duration={0.6}
       />
