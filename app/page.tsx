@@ -12,8 +12,7 @@ export default function Home() {
         className="object-cover z-[-1]"
       />
 
-      {/* Overlay content */}
-      <h1 className="text-white text-4xl mb-4">Countdown to Carnage</h1>
+      <h1 className="text-black text-4xl mb-4">Countdown to Carnage</h1>
       <Countdown />
     </main>
   );

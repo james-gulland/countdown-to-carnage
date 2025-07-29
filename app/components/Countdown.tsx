@@ -4,12 +4,13 @@ import React from "react";
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 
-import { Orbitron } from 'next/font/google';
+import { Orbitron } from "next/font/google";
+import { tanker } from "../fonts/tanker";
 
 const orbitron = Orbitron({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 // Target date (can update this anytime)
@@ -22,8 +23,8 @@ export const Countdown = () => {
         to={targetDate}
         labels={["DAYS", "HOURS", "MINUTES", "SECONDS"]}
         labelStyle={{
-          fontFamily: "Times New Roman, serif",
-          fontSize: 12,
+          fontFamily: tanker.style.fontFamily,
+          fontSize: 14,
           letterSpacing: 2,
           color: "#888",
           marginTop: 8,
