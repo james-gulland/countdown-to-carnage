@@ -37,7 +37,7 @@ export const Countdown = () => {
           color: "#fff",
         }}
         dividerStyle={{
-          color: "#444"
+          color: "#444",
         }}
         separatorStyle={{
           color: "#fff",

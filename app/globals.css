@@ -6,9 +6,9 @@
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-tanker: var(--font-tanker);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-tanker: var(--font-tanker);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,3 +28,18 @@ h1 {
   font-size: 3.6rem;
   font-weight: 400;
 }
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* .fcc__separator {
+  animation: blink 1s ease-in-out infinite;
+  transition: opacity 0.3s ease-in-out;
+} */
