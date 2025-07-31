@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { tanker } from "./fonts/tanker";
+import { tanker } from "./fonts/fonts";
 
 export const metadata: Metadata = {
   title: "Countdown to Carnage",

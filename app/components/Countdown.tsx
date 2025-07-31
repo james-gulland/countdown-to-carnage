@@ -1,33 +1,16 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import { orbitron, tanker } from "../fonts/fonts";
+import { useMediaQuery } from "react-responsive";
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
+import { VideoReveal } from "./VideoReveal";
 
-import { Orbitron } from "next/font/google";
-import { tanker } from "../fonts/tanker";
-
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-});
-
-// Target date (can update this anytime)
 const targetDate = new Date("2025-09-26T22:44:59").getTime();
+// const targetDate = Date.now() + 5000; // for testing purposes
 
 export const Countdown = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 640); // Tailwind's sm breakpoint
-    };
-
-    handleResize(); // check on mount
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const isMobile = useMediaQuery({ maxWidth: 640 });
 
   return (
     <section
@@ -63,7 +46,9 @@ export const Countdown = () => {
           size: isMobile ? 3 : 5,
         }}
         duration={0.6}
-      />
+      >
+        <VideoReveal />
+      </FlipClockCountdown>
     </section>
   );
 };
